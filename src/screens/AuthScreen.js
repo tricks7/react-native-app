@@ -78,7 +78,7 @@ export default class AuthScreen extends React.Component {
     return (
       <View style={[styles.container, { paddingBottom: this.state.isKeyboardVisible ? 220 : 0 }]}>
         <Image
-          source={require('../../assets/images/background.png')}
+        source={{ uri: 'https://images.unsplash.com/photo-1518897404543-95e699f9917b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ec5d3f3274eb909859ebb04d49b31feb&auto=format&fit=crop&w=675&q=80' }}
           style={styles.backgroundImage}
           resizeMode="cover"
         />
@@ -86,9 +86,12 @@ export default class AuthScreen extends React.Component {
         <View style={[styles.section, { paddingTop: 30 }]}>
           <Animated.Image
             resizeMode="contain"
-            style={[styles.logo, this.state.isKeyboardVisible && { height: 90 }, this.fadeIn(0)]}
-            source={require('../../assets/images/white-logo.png')}
+            style={[styles.logo, this.state.isKeyboardVisible && { height: 90 }, this.fadeIn(-10)]}
+            //{ source={require('../../assets/images/white-logo.png')} }
           />
+          <Text style={{fontWeight: 'bold', color: 'white'}}>
+                WELCOME
+          </Text>
         </View>
 
         <Animated.View style={[styles.section, styles.middle, this.fadeIn(700, -20)]}>

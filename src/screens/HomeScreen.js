@@ -4,8 +4,10 @@ import {
   View,
   Platform,
   Image,
+  ImageBackground,
   TouchableOpacity,
   Linking,
+  ListItem
 } from 'react-native';
 
 import { Fonts, Colors } from '../constants';
@@ -14,6 +16,10 @@ import {
   Text,
   Title,
 } from '../components/StyledText';
+import { Dropdown } from '../components';
+import ToggleSwitch from 'toggle-switch-react-native'
+import { CheckBox } from "react-native-elements";
+
 
 export default function HomeScreen({ isExtended, setIsExtended }) {
   const rnsUrl = 'https://reactnativestarter.com';
@@ -29,35 +35,51 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
 
   return (
     <View style={styles.container}>
-      <Image style={styles.bgImage} source={require('../../assets/images/background.png')} />
-      <View style={styles.section}>
+    <ImageBackground source={{ uri: 'https://images.unsplash.com/photo-1500829243541-74b677fecc30?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8557c6d2fba5366815ca9d77231da407&auto=format&fit=crop&w=1055&q=80' }}
+    style={{width: '100%', height: '100%'}}
+        resizeMode="cover">
+        <View style={styles.section}>
         <Text size={20} white>Home</Text>
       </View>
       <View style={styles.section}>
-        <Text color="#19e7f7" size={15}>The smartest Way to build your mobile app</Text>
-        <Text size={30} bold white style={styles.title}>React Native Starter</Text>
+{/*         <Text color="white" size={15}>The smartest Way to build your mobile app</Text>
+ */}        <Text size={50} bold white style={styles.title}>Friend Field</Text>
       </View>
       <View style={[styles.section, styles.sectionLarge]}>
-        <Text color="#19e7f7" hCenter size={15} style={styles.description}> A powerful starter project that bootstraps development of your mobile application and saves you $20 000*</Text>
+        <Text color="white" hCenter size={15} style={styles.description}>Choose an option below</Text>
         <View style={styles.priceContainer}>
-          <View style={{ flexDirection: 'row' }}>
-            <Text white bold size={50} style={styles.price}>{isExtended ? '$199.95' : '$49.95'}</Text>
+          {/* <View style={{ flexDirection: 'row' }}>
+            <Text white bold size={50} style={styles.price}>{isExtended ? 'Fruits' : 'Vegetables'}</Text>
           </View>
           <TouchableOpacity style={styles.priceLink} onPress={() => isExtended ? setIsExtended(false) : setIsExtended(true)}>
-            <Text white size={14}>{isExtended ? 'Multiple Applications License' : 'Single Application License'}</Text>
-          </TouchableOpacity>
+            <Text white size={14}>{isExtended ? 'Other Options' : 'Other Options'}</Text>
+          </TouchableOpacity> */}
         </View>
       </View>
-      <View style={styles.section}>
+
+      
+
+      <View style={styles.componentsSection}>
+        <Text style={styles.componentSectionHeader}>Select</Text>
+
+        <Dropdown
+          style={{ width: 200, alignSelf: 'center' }}
+          onSelect={() => {}}
+          items={['Fruits', 'Vegetables']}
+        />
+      </View>
+      {/* <View style={styles.section}>
         <Button
           style={{ alignSelf: 'stretch' }}
           primary
           rounded
-          bgColor="#FF1358"
+          bgColor="black"
+          textColor={Colors.primary}
           caption="Purchase now"
           onPress={handleClick}
         />
-      </View>
+      </View> */}
+      </ImageBackground>
     </View>
   );
 }
@@ -67,6 +89,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'space-around',
+    
   },
   bgImage: {
     position: 'absolute',
@@ -111,4 +134,16 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: Colors.primary,
   },
+  componentsSection: {
+    backgroundColor: Colors.white,
+    padding: 15,
+    marginBottom: 20,
+    borderRadius: 5,
+  },
+  componentSectionHeader: {
+    fontFamily: Fonts.primaryRegular,
+    color: '#686868',
+    fontSize: 20,
+    marginBottom: 20,
+  }
 });

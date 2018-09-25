@@ -132,7 +132,7 @@ export default function ArticleScreen(props) {
           </View>
           <View style={styles.buttonsSection}>
             <View style={{ flex: 3 }}>
-              <Button secondary caption="Add To Bag" rounded />
+              <Button secondary caption="Add To Basket" rounded />
             </View>
             <View style={styles.actionButtonContainer}>
               <Button action bgColor="#E6E6E6">

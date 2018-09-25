@@ -44,7 +44,7 @@ export default function PagesScreen(props) {
         </TouchableOpacity>
         <TouchableOpacity onPress={props.authStateActions.loggedOut} style={styles.item}>
           <Image resizeMode="contain" source={profileIcon} style={styles.itemImage} />
-          <Text style={styles.itemText}>Login</Text>
+          <Text style={styles.itemText}>Logout</Text>
         </TouchableOpacity>
       </View>
     </View>

@@ -19,14 +19,14 @@ export default function ProfileScreen(props) {
     <View style={styles.container}>
       <ImageBackground
         resizeMode="cover"
-        source={require('../../assets/images/avatar.png')}
+        source={{ uri: 'https://thoughtcatalog.files.wordpress.com/2015/06/michaelscott_theoffice.jpeg?w=698&h=400'}}
         style={[styles.section, styles.header]}
       >
         <View style={{ flex: 1, justifyContent: 'center' }}>
-          <Text style={styles.title}>Jane SIMPSON</Text>
+          <Text style={styles.title}>Michael SCOTT</Text>
           <View>
-            <Text style={styles.position}>UI/UX Designer</Text>
-            <Text style={styles.company}>React Native Starter</Text>
+            <Text style={styles.position}>World's Best Boss</Text>
+            <Text style={styles.company}>Dunder Mifflin</Text>
           </View>
         </View>
         <View style={{ flexDirection: 'row' }}>
@@ -74,19 +74,19 @@ export default function ProfileScreen(props) {
         <View style={{ flex: 1 }}>
           <View style={styles.infoRow}>
             <Icon style={styles.infoIcon} name="map-marker" size={20} color="#c3c3c3" />
-            <Text>Paris, France</Text>
+            <Text>Scranton, PA</Text>
           </View>
           <View style={styles.hr} />
 
           <View style={styles.infoRow}>
             <Icon style={styles.infoIcon} name="instagram" size={20} color="#c3c3c3" />
-            <Text>rns</Text>
+            <Text>mscott</Text>
           </View>
           <View style={styles.hr} />
 
           <View style={styles.infoRow}>
             <Icon style={styles.infoIcon} name="youtube" size={20} color="#c3c3c3" />
-            <Text>React Native Starter</Text>
+            <Text>The Electric City</Text>
           </View>
         </View>
 
