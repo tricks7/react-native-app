@@ -13,6 +13,7 @@ import {
 
 import { Fonts, Colors } from '../constants';
 import Button from '../components/Button';
+import Modal from '../components/Modal';
 import {
   Text,
   Title,
@@ -40,18 +41,16 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
     style={{width: '100%', height: '100%'}}
         resizeMode="cover">
         <View style={styles.section}>
-        <Text size={20} white>Home</Text>
+        <Text size={20} white></Text>
       </View>
       <View style={styles.section}>
 {/*         <Text color="white" size={15}>The smartest Way to build your mobile app</Text>
  */}        <Text size={50} bold white style={styles.title}>Friend Field</Text>
       </View>
       <View style={[styles.section, styles.sectionLarge]}>
-{/*         <Text color="white" hCenter size={15} style={styles.description}>Choose an option below</Text>
- */}        <View style={styles.priceContainer}>
-          <TabBarIOS>
-
-            </TabBarIOS>
+        <Text color="white" hCenter size={15} style={styles.description}>A Virtual Community Garden</Text>
+        <View style={styles.priceContainer}>
+          <Modal />
           {/* <View style={{ flexDirection: 'row' }}>
             <Text white bold size={50} style={styles.price}>{isExtended ? 'Fruits' : 'Vegetables'}</Text>
           </View>
@@ -72,7 +71,7 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
           items={['Fruits', 'Vegetables']}
         />
       </View> */}
-       <View style={styles.section}>
+       {/* <View style={styles.section}>
         <Button
           style={{ alignSelf: 'stretch' }}
           primary
@@ -82,7 +81,7 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
           caption="Swipe to See what's Available"
           onPress={handleClick}
         />
-      </View>
+      </View> */}
       </ImageBackground>
     </View>
   );

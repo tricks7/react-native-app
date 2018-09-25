@@ -32,7 +32,7 @@ class CalendarScreen extends React.Component {
         key={`label-${label}`}
         style={{
           padding: 5,
-          backgroundColor: label === 'Urgent' ? Colors.primary : Colors.secondary,
+          backgroundColor: label === 'Almost Expired' ? Colors.primary : Colors.secondary,
           borderRadius: 3,
         }}
       >

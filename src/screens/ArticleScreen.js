@@ -38,9 +38,9 @@ export default function ArticleScreen(props) {
             </View>
           )}
 
-          <View style={styles.recommendationItemRating}>
+          {/* <View style={styles.recommendationItemRating}>
             <Caption bold color={Colors.yellow}>{item.rating}</Caption>
-          </View>
+          </View> */}
         </View>
         <Image
           style={{ width: 150, height: 100 }}
@@ -72,7 +72,7 @@ export default function ArticleScreen(props) {
             <Text style={{ color: Colors.primaryLight }}>{itemParams.title.split(' ')[0]}</Text>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'stretch', marginTop: 8 }}>
               <Title bold color={Colors.gray}>{itemParams.title}</Title>
-              <Title bold color={Colors.yellow}>4.8</Title>
+             {/*  <Title bold color={Colors.yellow}>4.8</Title> */}
             </View>
           </View>
         </View>
@@ -90,8 +90,8 @@ export default function ArticleScreen(props) {
               />
             )}
             data={[
-              require('../../assets/images/nike1.png'),
-              require('../../assets/images/nike2.jpg'),
+              require('../../assets/images/beets.jpg'),
+              require('../../assets/images/schrute.jpg'),
             ]}
           />
           { itemParams.badge && (
@@ -103,12 +103,12 @@ export default function ArticleScreen(props) {
         <View style={styles.bodyContainer}>
           <View style={styles.bodyHeading}>
             <Title color={Colors.gray} size={23}>{itemParams.price}</Title>
-            <Caption underline size={15} color={Colors.lightGray}>Free delivery & returns</Caption>
+            <Caption underline size={15} color={Colors.lightGray}>Contact</Caption>
           </View>
           <View style={{ paddingTop: 20 }}>
-            <Text color={Colors.primaryLight}>Size Guide</Text>
-            <View style={styles.row}>
-              <View style={styles.sizeDropdownContainer}>
+{/*             <Text color={Colors.primaryLight}>Size Guide</Text>
+ */}            <View style={styles.row}>
+              {/* <View style={styles.sizeDropdownContainer}>
                 <Dropdown
                   borderColor={Colors.grey}
                   color={Colors.gray}
@@ -117,7 +117,7 @@ export default function ArticleScreen(props) {
                   onSelect={index => props.setSelectedSizeIndex(parseInt(index, 10))}
                   selectedIndex={props.selectedSizeIndex}
                 />
-              </View>
+              </View> */}
               <View style={styles.quantityDropdownContainer}>
                 <Dropdown
                   borderColor={Colors.grey}
@@ -133,6 +133,7 @@ export default function ArticleScreen(props) {
           <View style={styles.buttonsSection}>
             <View style={{ flex: 3 }}>
               <Button secondary caption="Add To Basket" rounded />
+              
             </View>
             <View style={styles.actionButtonContainer}>
               <Button action bgColor="#E6E6E6">
@@ -149,19 +150,10 @@ export default function ArticleScreen(props) {
               Product Details
             </Title>
             <Text style={styles.p}>
-              A T-shirt (or t shirt, or t) is a style of unisex fabric shirt,
-              named after the T shape of the body and sleeves. It is normally
-              associated with short sleeves, a round neckline, known as a crew
-              neck, with no collar. T-shirts are generally made of a light,
-              inexpensive fabric, and are easy to clean.
+            Eating a diet with plenty of fruits and vegetables has been linked to improved health, and for good reason. Veggies and fruits (both fresh and frozen) are loaded with vitamins, minerals, fiber, and antioxidants, which have been shown to protect against chronic diseases such as heart disease and cancer.
             </Text>
             <Text style={styles.p}>
-              Typically made of cotton textile in a stockinette or jersey,
-              knit, it has a distinctively pliable texture compared to shirts
-              made of woven cloth. The majority of modern versions have a body
-              made from a continuously woven tube, on a circular loom, so that
-              the torso has no side seams. The manufacture of T-shirts has become
-              highly automated and may include fabric cutting by laser or water jet.
+              Add this item to your basket today!
             </Text>
           </View>
           <View style={{ alignItems: 'center', paddingVertical: 15, }}>
@@ -176,7 +168,7 @@ export default function ArticleScreen(props) {
             />
           </View>
         </View>
-        <View style={styles.recommendationsContainer}>
+        {/* <View style={styles.recommendationsContainer}>
           <Title color={Colors.lightGray} style={{ marginVertical: 10 }}>YOU MIGHT ALSO LIKE</Title>
           <FlatList
             showsHorizontalScrollIndicator={false}
@@ -185,13 +177,13 @@ export default function ArticleScreen(props) {
             keyExtractor={item => item.id}
             renderItem={_renderRecommendationCard}
           />
-        </View>
+        </View> */}
 
         <View style={{ paddingBottom: 50, paddingHorizontal: 15, }}>
           <Title color={Colors.lightGray} style={{ marginVertical: 10 }}>Share</Title>
           <View style={{ flexDirection: 'row'}}>
             <Text color={Colors.gray}>Share with a tag</Text>
-            <Text color={Colors.blue} style={{ marginLeft: 5}}>#whitetrainers</Text>
+            <Text color={Colors.blue} style={{ marginLeft: 5}}>#friendfield</Text>
           </View>
 
           <View style={{ flexDirection: 'row', marginTop: 15 }}>
@@ -222,6 +214,8 @@ export default function ArticleScreen(props) {
       </ScrollView>
     );
 }
+
+
 
 const styles = StyleSheet.create({
   container: {

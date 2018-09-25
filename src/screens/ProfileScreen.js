@@ -86,7 +86,7 @@ export default function ProfileScreen(props) {
 
           <View style={styles.infoRow}>
             <Icon style={styles.infoIcon} name="youtube" size={20} color="#c3c3c3" />
-            <Text>The Electric City</Text>
+            <Text></Text>
           </View>
         </View>
 
