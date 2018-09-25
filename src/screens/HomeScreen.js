@@ -7,7 +7,8 @@ import {
   ImageBackground,
   TouchableOpacity,
   Linking,
-  ListItem
+  ListItem,
+  TabBarIOS
 } from 'react-native';
 
 import { Fonts, Colors } from '../constants';
@@ -16,7 +17,7 @@ import {
   Text,
   Title,
 } from '../components/StyledText';
-import { Dropdown } from '../components';
+/* import { Dropdown } from '../components'; */
 import ToggleSwitch from 'toggle-switch-react-native'
 import { CheckBox } from "react-native-elements";
 
@@ -46,8 +47,11 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
  */}        <Text size={50} bold white style={styles.title}>Friend Field</Text>
       </View>
       <View style={[styles.section, styles.sectionLarge]}>
-        <Text color="white" hCenter size={15} style={styles.description}>Choose an option below</Text>
-        <View style={styles.priceContainer}>
+{/*         <Text color="white" hCenter size={15} style={styles.description}>Choose an option below</Text>
+ */}        <View style={styles.priceContainer}>
+          <TabBarIOS>
+
+            </TabBarIOS>
           {/* <View style={{ flexDirection: 'row' }}>
             <Text white bold size={50} style={styles.price}>{isExtended ? 'Fruits' : 'Vegetables'}</Text>
           </View>
@@ -59,7 +63,7 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
 
       
 
-      <View style={styles.componentsSection}>
+      {/* <View style={styles.componentsSection}>
         <Text style={styles.componentSectionHeader}>Select</Text>
 
         <Dropdown
@@ -67,18 +71,18 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
           onSelect={() => {}}
           items={['Fruits', 'Vegetables']}
         />
-      </View>
-      {/* <View style={styles.section}>
+      </View> */}
+       <View style={styles.section}>
         <Button
           style={{ alignSelf: 'stretch' }}
           primary
           rounded
           bgColor="black"
           textColor={Colors.primary}
-          caption="Purchase now"
+          caption="Swipe to See what's Available"
           onPress={handleClick}
         />
-      </View> */}
+      </View>
       </ImageBackground>
     </View>
   );
