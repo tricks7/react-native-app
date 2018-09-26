@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Alert,
   StyleSheet,
   View,
   TouchableOpacity,
@@ -10,9 +11,9 @@ import {
 } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import { FontAwesome as Icon } from '@expo/vector-icons';
-
+import { Button } from "react-native-elements";
 import { Fonts, Colors, Layout } from '../constants';
-import { Dropdown, Button } from '../components';
+import { Dropdown } from '../components';
 import {
   Text,
   Title,
@@ -103,8 +104,9 @@ export default function ArticleScreen(props) {
         <View style={styles.bodyContainer}>
           <View style={styles.bodyHeading}>
             <Title color={Colors.gray} size={23}>{itemParams.price}</Title>
-            <Caption underline size={15} color={Colors.lightGray}>Contact</Caption>
-          </View>
+            
+{/*             <Caption underline size={15} color={Colors.lightGray}>Contact</Caption>
+ */}          </View>
           <View style={{ paddingTop: 20 }}>
 {/*             <Text color={Colors.primaryLight}>Size Guide</Text>
  */}            <View style={styles.row}>
@@ -132,14 +134,25 @@ export default function ArticleScreen(props) {
           </View>
           <View style={styles.buttonsSection}>
             <View style={{ flex: 3 }}>
-              <Button secondary caption="Add To Basket" rounded />
+            <Button onPress={() => {
+            Alert.alert("You added an item!");
+          }}
+          title="Add to Basket"
+          />
+          </View>
+          <View style={{ flex: 3 }}>
+            <Button onPress={() => {
+            Alert.alert("555-555-5555");
+          }}
+          title="Contact"
+          />
               
             </View>
-            <View style={styles.actionButtonContainer}>
+            {/* <View style={styles.actionButtonContainer}>
               <Button action bgColor="#E6E6E6">
                 <Text><Icon name="heart" size={20} color="white" /></Text>
               </Button>
-            </View>
+            </View> */}
           </View>
           <View style={styles.description}>
             <Title
@@ -156,7 +169,7 @@ export default function ArticleScreen(props) {
               Add this item to your basket today!
             </Text>
           </View>
-          <View style={{ alignItems: 'center', paddingVertical: 15, }}>
+          {/* <View style={{ alignItems: 'center', paddingVertical: 15, }}>
             <Button
               bordered
               bgColor={Colors.grey}
@@ -166,7 +179,7 @@ export default function ArticleScreen(props) {
                 width: 200,
               }}
             />
-          </View>
+          </View> */}
         </View>
         {/* <View style={styles.recommendationsContainer}>
           <Title color={Colors.lightGray} style={{ marginVertical: 10 }}>YOU MIGHT ALSO LIKE</Title>
@@ -186,7 +199,7 @@ export default function ArticleScreen(props) {
             <Text color={Colors.blue} style={{ marginLeft: 5}}>#friendfield</Text>
           </View>
 
-          <View style={{ flexDirection: 'row', marginTop: 15 }}>
+          {/* <View style={{ flexDirection: 'row', marginTop: 15 }}>
             <Button
               action
               bgColor="#4867AD"
@@ -209,7 +222,7 @@ export default function ArticleScreen(props) {
             >
               <Icon name="snapchat" size={25} color="white" />
             </Button>
-          </View>
+          </View> */}
         </View>
       </ScrollView>
     );

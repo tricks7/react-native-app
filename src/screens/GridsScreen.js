@@ -54,7 +54,7 @@ export default class GridsScreen extends React.Component {
           </View>
           <View style={styles.itemOneContent}>
             <Text style={styles.itemOneTitle} numberOfLines={1}>{item.title}</Text>
-            <Text style={styles.itemOneSubTitle} styleName="collapsible" numberOfLines={3}>{item.subtitle}</Text>
+            <Text style={styles.itemOneLocation} styleName="collapsible" numberOfLines={3}>{item.location}</Text>
             <Text style={styles.itemOnePrice} numberOfLines={1}>{item.price}</Text>
           </View>
         </View>
@@ -83,7 +83,7 @@ export default class GridsScreen extends React.Component {
           />
           <View style={styles.itemTwoOverlay} />
           <Text style={styles.itemTwoTitle}>{item.title}</Text>
-          <Text style={styles.itemTwoSubTitle}>{item.subtitle}</Text>
+          <Text style={styles.itemTwoLocation}>{item.location}</Text>
           <Text style={styles.itemTwoPrice}>{item.price}</Text>
         </View>
       </TouchableOpacity>
@@ -106,7 +106,7 @@ export default class GridsScreen extends React.Component {
             <Text style={styles.itemThreeBrand}>{item.brand}</Text>
             <View>
               <Text style={styles.itemThreeTitle}>{item.title}</Text>
-              <Text style={styles.itemThreeSubtitle} numberOfLines={1}>{item.subtitle}</Text>
+              <Text style={styles.itemThreeLocation} numberOfLines={1}>{item.location}</Text>
             </View>
             <View style={styles.itemThreeMetaContainer}>
               { item.badge && (
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.primaryRegular,
     fontSize: 15,
   },
-  itemOneSubTitle: {
+  itemOneLocation: {
     fontFamily: Fonts.primaryRegular,
     fontSize: 13,
     color: '#B2B2B2',
@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.primaryBold,
     fontSize: 20,
   },
-  itemTwoSubTitle: {
+  itemTwoLocation: {
     color: Colors.white,
     fontFamily: Fonts.primaryRegular,
     fontSize: 15,
@@ -263,7 +263,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#5F5F5F',
   },
-  itemThreeSubtitle: {
+  itemThreeLocation: {
     fontFamily: Fonts.primaryRegular,
     fontSize: 12,
     color: '#a4a4a4',

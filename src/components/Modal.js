@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Modal, Text, Button, Platform } from 'react-native';
+import DataInput from '../components/DataInput';
  
 export default class Mynewproject extends Component {
  
@@ -35,15 +36,15 @@ export default class Mynewproject extends Component {
 
                 <View style={styles.ModalInsideView}>
                     {/* Put All Your Components Here, Which You Want To Show Inside The Modal. */}
- 
-                    <Text style={styles.TextStyle}>Text Component With Some Sample Text In Modal. </Text>
-
-                    <Button  title="Click Here To Hide Modal" onPress={() => { this.ShowModalFunction(!this.state.ModalVisibleStatus)} } />
+                <DataInput />
+{/*                     <Text style={styles.TextStyle}>Text Component With Some Sample Text In Modal. </Text>
+ */}
+                    <Button title="Submit" onPress={() => { this.ShowModalFunction(!this.state.ModalVisibleStatus)} } />
                     {/* Put All Your Components Here, Which You Want To Show Inside The Modal. */}
                 </View>
             </View>
         </Modal>
-        <Button onPress={() => { this.ShowModalFunction(true) }} title="Click Here To Show Modal" />
+        <Button onPress={() => { this.ShowModalFunction(true) }} title="Click Here To Get Started" />
       </View>        
    );
  }
@@ -79,8 +80,8 @@ TextStyle:{
   marginBottom: 20, 
   color: "#fff",
   padding: 20,
-  textAlign: 'center'
- 
+  textAlign: 'center',
+  fontWeight: 'bold'
 }
  
 });

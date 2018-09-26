@@ -87,7 +87,7 @@ export default TabNavigator(
             <Image
               style={styles.headerImage}
               source={hederBackground} />
-            <Text style={styles.headerCaption}>Grids</Text>
+            <Text style={styles.headerCaption}>Available</Text>
           </View>
         ),
       },
