@@ -12,4 +12,6 @@ This is the deployed link for the backend of my capstone that I completed in my 
 
 URL: https://capstone-back-end.herokuapp.com/products
 
+URL: https://www.youtube.com/watch?v=JhtusHncnhc&t=14s
+
 # react-native-app
