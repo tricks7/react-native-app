@@ -16,4 +16,3 @@ Video from Capstone presentation:
 
 https://www.youtube.com/watch?v=JhtusHncnhc&t=14s
 
-# react-native-app
