@@ -14,5 +14,4 @@ URL: https://capstone-back-end.herokuapp.com/products
 
 Video from Capstone presentation:
 
-https://www.youtube.com/watch?v=JhtusHncnhc&t=14s
-
+https://youtu.be/JhtusHncnhc
